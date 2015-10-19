@@ -1,8 +1,8 @@
-package be.drissamri.locations.rest;
+package com.drg.koolping.rest;
 
-import be.drissamri.locations.model.LocationEntry;
-import be.drissamri.locations.repository.LocationRepository;
-import be.drissamri.locations.repository.domain.LocationEntity;
+import com.drg.koolping.model.LocationEntry;
+import com.drg.koolping.repository.LocationRepository;
+import com.drg.koolping.repository.domain.LocationEntity;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package be.drissamri.locations;
+package com.drg.koolping;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

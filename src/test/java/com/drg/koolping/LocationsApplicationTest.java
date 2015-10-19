@@ -1,4 +1,4 @@
-package be.drissamri.locations;
+package com.drg.koolping;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

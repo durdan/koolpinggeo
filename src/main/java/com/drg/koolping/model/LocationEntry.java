@@ -1,4 +1,4 @@
-package be.drissamri.locations.model;
+package com.drg.koolping.model;
 
 import java.io.Serializable;
 import java.util.Objects;

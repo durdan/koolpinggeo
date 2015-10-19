@@ -1,6 +1,6 @@
-package be.drissamri.locations.repository;
+package com.drg.koolping.repository;
 
-import be.drissamri.locations.repository.domain.LocationEntity;
+import com.drg.koolping.repository.domain.LocationEntity;
 import java.util.List;
 import org.springframework.data.geo.Distance;
 import org.springframework.data.geo.Point;
