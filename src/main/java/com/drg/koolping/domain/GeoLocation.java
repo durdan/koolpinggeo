@@ -1,4 +1,4 @@
-package com.drg.koolping.repository.domain;
+package com.drg.koolping.domain;
 
 /**
  * Created by durdan on 19/10/2015.

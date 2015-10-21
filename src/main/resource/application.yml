@@ -1,0 +1,32 @@
+##How to use profile
+##java -jar -Dspring.profiles.active=integration your-app.jar
+#
+#spring.profiles.active: integration
+## use local or embedded mongodb at localhost:27017
+##spring.data.mongodb.uri: mongodb://localhost:27017/yelp
+#spring.data.mongodb.host=localhost
+#spring.data.mongodb.port=27017
+#spring.data.mongodb.databse=test
+#
+#---
+##spring.profiles: production
+##spring.data.mongodb.uri: mongodb://<user>:<passwd>@<url>:<port>/<dbname>
+spring:
+  profiles:
+    active: integration
+
+spring:
+  profiles: integration
+spring:
+    data:
+        mongodb:
+            host: localhost
+            port: 27017
+            database: memento-security-test
+
+---
+spring:
+   profiles: production
+spring.data.mongodb:
+  host:localhost
+   port:27017

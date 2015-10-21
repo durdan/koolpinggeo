@@ -1,4 +1,4 @@
-package com.drg.koolping.repository.domain;
+package com.drg.koolping.domain;
 
 import java.util.Objects;
 import org.springframework.data.mongodb.core.geo.GeoJsonPoint;

@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class LocationResource {
-  @Autowired
-  private LocationRepository repository;
+//  @Autowired
+//  private LocationRepository repository;
 
 //  @RequestMapping(method = RequestMethod.GET)
 //  public final List<LocationEntity> getLocations(
