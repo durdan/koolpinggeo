@@ -18,4 +18,9 @@ public interface BusinessRepository extends MongoRepository<BusinessEntity,Strin
     // { 'location' : { '$near' : [point.x, point.y], '$maxDistance' : distance}}
    // List<BusinessEntity> findByLocationNear(Point location, Distance distance);
     List<BusinessEntity> findByAddressNear(Point location, Distance distance);
+//    List<Location> findByPositionWithin(Circle c);
+//
+//    List<Location> findByPositionWithin(Box b);
+//
+//    List<Location> findByPositionNear(Point p, Distance d);
 }

@@ -26,7 +26,7 @@ import static org.junit.Assert.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class LocationRepositoryTest {
 
-    private static final Point DUS = new Point(6.810036, 51.224088);
+    private static final Point DUS = new Point(-122.3947492,37.7899519);
     @Autowired
     LocationRepository locationRepository;
 
