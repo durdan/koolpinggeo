@@ -4,7 +4,7 @@ package com.drg.koolping.domain;
  * Created by durdan on 19/10/2015.
  */
 public class Address {
-    private GeoLocation loc;
+    private GeoLocation location;
     private String street;
     private String aptNo;
     private String city;
@@ -20,12 +20,12 @@ public class Address {
         this.street = street;
     }
 
-    public GeoLocation getLoc() {
-        return loc;
+    public GeoLocation getLocation() {
+        return location;
     }
 
-    public void setLoc(GeoLocation loc) {
-        this.loc = loc;
+    public void setLocation(GeoLocation location) {
+        this.location = location;
     }
 
     public String getAptNo() {
@@ -75,7 +75,7 @@ public class Address {
 
         Address address = (Address) o;
 
-        if (!getLoc().equals(address.getLoc())) return false;
+        if (!getLocation().equals(address.getLocation())) return false;
         if (!getStreet().equals(address.getStreet())) return false;
         if (!getAptNo().equals(address.getAptNo())) return false;
         if (!getCity().equals(address.getCity())) return false;
@@ -87,7 +87,7 @@ public class Address {
 
     @Override
     public int hashCode() {
-        int result = getLoc().hashCode();
+        int result = getLocation().hashCode();
         result = 31 * result + getStreet().hashCode();
         result = 31 * result + getAptNo().hashCode();
         result = 31 * result + getCity().hashCode();
