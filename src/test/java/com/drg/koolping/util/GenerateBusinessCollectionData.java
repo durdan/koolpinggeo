@@ -3,6 +3,8 @@ package com.drg.koolping.util;
 import com.drg.koolping.domain.Address;
 import com.drg.koolping.domain.BusinessEntity;
 import com.drg.koolping.domain.GeoLocation;
+import com.drg.koolping.domain.LocationEntity;
+import org.springframework.data.mongodb.core.geo.GeoJsonPoint;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,31 +17,25 @@ public class GenerateBusinessCollectionData {
 
     private BusinessEntity businessEntity;
 
-    public List<BusinessEntity> generateBusinessCollectionData(int collectionSize){
-        CsvReader csvReader = new CsvReader( "postcode-outcodes.csv");
+    public List<BusinessEntity> generateBusinessCollectionData(int collectionSize) {
+        CsvReader csvReader = new CsvReader("postcode-outcodes.csv");
         List<PostCodeGeoLocation> postCodeGeoLocationList = csvReader.readRecords();
-        List<BusinessEntity> businessEntities= new ArrayList<BusinessEntity>();
-        for(int i=0;i<collectionSize;i++) {
-            BusinessEntity businessEntity=new BusinessEntity();
+        List<BusinessEntity> businessEntities = new ArrayList<BusinessEntity>();
+        for (int i = 0; i < collectionSize; i++) {
+            BusinessEntity businessEntity = new BusinessEntity();
             businessEntity.setType("Hospital");
             businessEntity.setName("Test name" + i);
-            Address address=new Address();
-            Random randomNo=new Random();
+            Address address = new Address();
+            Random randomNo = new Random();
             address.setAptNo(String.valueOf(randomNo.nextInt()));
             address.setCity("TestCity" + randomNo.nextInt());
             address.setCountry("UK");
             address.setState("MiddleSex");
             address.setStreet("TestStreet" + i);
             address.setZip(postCodeGeoLocationList.get(i).getOutcode());
-            GeoLocation geoLocation=new GeoLocation();
-            geoLocation.setType("Point");
-            List<Double> coordinate=new ArrayList<Double>();
-            coordinate.add(Double.parseDouble(postCodeGeoLocationList.get(i).getLongitude()));
-            coordinate.add(Double.parseDouble(postCodeGeoLocationList.get(i).getLatitude()));
+            GeoJsonPoint geoJsonPoint = new GeoJsonPoint(Double.valueOf(postCodeGeoLocationList.get(i).getLongitude()), Double.valueOf(postCodeGeoLocationList.get(i).getLatitude()));
 
-
-            geoLocation.setCoordinates(coordinate);
-            address.setLocation(geoLocation);
+            address.setLocation(geoJsonPoint);
             businessEntity.setAddress(address);
             businessEntities.add(businessEntity);
 

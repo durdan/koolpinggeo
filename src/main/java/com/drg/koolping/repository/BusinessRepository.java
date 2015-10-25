@@ -15,7 +15,7 @@ import java.util.List;
 public interface BusinessRepository extends MongoRepository<BusinessEntity,String> {
     // { 'location' : { '$near' : [point.x, point.y], '$maxDistance' : distance}}
    // List<BusinessEntity> findByLocationNear(Point location, Distance distance);
-    List<BusinessEntity> findByAddressNear(Point location, Distance distance);
+    List<BusinessEntity> findByAddressLocationNear(Point location, Distance distance);
 
 //    List<Location> findByPositionWithin(Circle c);
 //

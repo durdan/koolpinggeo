@@ -1,10 +1,12 @@
 package com.drg.koolping.domain;
 
+import org.springframework.data.mongodb.core.geo.GeoJsonPoint;
+
 /**
  * Created by durdan on 19/10/2015.
  */
 public class Address {
-    private GeoLocation location;
+   private GeoJsonPoint location;;
     private String street;
     private String aptNo;
     private String city;
@@ -20,11 +22,11 @@ public class Address {
         this.street = street;
     }
 
-    public GeoLocation getLocation() {
+    public GeoJsonPoint getLocation() {
         return location;
     }
 
-    public void setLocation(GeoLocation location) {
+    public void setLocation(GeoJsonPoint location) {
         this.location = location;
     }
 
