@@ -1,10 +1,9 @@
 package com.drg.koolping.util;
 
-import com.drg.koolping.domain.Address;
-import com.drg.koolping.domain.BusinessEntity;
-import com.drg.koolping.domain.GeoLocation;
-import com.drg.koolping.domain.LocationEntity;
+import com.drg.koolping.domain.*;
+import org.springframework.data.geo.Point;
 import org.springframework.data.mongodb.core.geo.GeoJsonPoint;
+
 
 import java.util.ArrayList;
 import java.util.List;

@@ -74,5 +74,6 @@
     <orderEntry type="library" exported="" name="Gradle: com.github.fge:msg-simple:1.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.google.guava:guava:16.0.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.github.fge:btf:1.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.16.6" level="project" />
   </component>
 </module>

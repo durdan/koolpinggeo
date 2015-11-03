@@ -37,12 +37,12 @@ public class LocationRepositoryTest {
         assertTrue(businessEntitiesusiness.getTotalElements() > 0);
     }
 
-    @Test
-    public void testFindBySubjectAndLocationNear() throws Exception {
-
-        List<LocationEntity> locationNear=locationRepository.findBySubjectAndLocationNear("test1",DUS,new Distance(1, Metrics.KILOMETERS));
-        assertTrue(locationNear.size()>0);
-
-
-    }
+//    @Test
+//    public void testFindBySubjectAndLocationNear() throws Exception {
+//
+//        List<LocationEntity> locationNear=locationRepository.findBySubjectAndLocationNear("test1",DUS,new Distance(1, Metrics.KILOMETERS));
+//        assertTrue(locationNear.size()>0);
+//
+//
+//    }
 }

@@ -1,12 +1,19 @@
 package com.drg.koolping.domain;
 
+import org.springframework.data.geo.Point;
 import org.springframework.data.mongodb.core.geo.GeoJsonPoint;
+import org.springframework.data.mongodb.core.index.GeoSpatialIndexType;
+import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
 
 /**
  * Created by durdan on 19/10/2015.
  */
+
 public class Address {
-   private GeoJsonPoint location;;
+
+    @GeoSpatialIndexed(type = GeoSpatialIndexType.GEO_2DSPHERE)
+    private GeoJsonPoint  location;
+
     private String street;
     private String aptNo;
     private String city;
@@ -22,11 +29,11 @@ public class Address {
         this.street = street;
     }
 
-    public GeoJsonPoint getLocation() {
+    public Point getLocation() {
         return location;
     }
 
-    public void setLocation(GeoJsonPoint location) {
+    public void setLocation(GeoJsonPoint  location) {
         this.location = location;
     }
 
